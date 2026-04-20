@@ -1,5 +1,8 @@
 package Agenda;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class Agenda {
     //Aaron
 
@@ -15,18 +18,31 @@ public class Agenda {
 
 
     //Vero
-    // Metodo listarContactos: Mostrar todos los contactos de la agenda
+    // METODO listarContactos: Mostrar todos los contactos de la agenda
     public void listarContactos(){
         System.out.println("\n CONTACTOS");
         if (contactos.isEmpty()) { //Verificamos si la lista esta vacía
             System.out.println("Agenda Vacía");
             return;
         }
-        for (Contacto c : contactos) { //Recorremos la lista de contactos
-            System.out.println(c);
+        //Se ordena la lista antes de mostrarla
+        Collections.sort(contactos, new Comparator<Contacto>(){
+            @Override
+            public int compare(Contacto c1, Contacto c2) {
+                int resultadoNombre = c1.getNombre().compareToIgnoreCase(c2.getNombre()); // Comparamos nombres ignorando mayúsculas
+
+                if (resultadoNombre == 0) { // Si los nombres son iguales, comparamos apellidos
+                    return c1.getApellidos().compareToIgnoreCase(c2.getApellidos());
+                }
+                return resultadoNombre; // Si no son iguales, usamos el resultado del nombre
+            }
+        });
+        for (Contacto c : contactos) { //Recorremos la lista de contactos ya ordenada
+            System.out.println(c.getNombre() + " " + c.getApellidos() + " " + c.getTelefono()
+            );
         }
     }
-    //Metodo buscarContacto: Busca un contacto por su nombre y muestra su telefono
+    //METODO buscarContacto: Busca un contacto por su nombre y muestra su telefono
     public void buscarContacto(String nombre, String apellidos) {
         for (Contacto c : contactos) { //Recorremos todos los contactos
             boolean mismoNombre = c.getNombre().equalsIgnoreCase(nombre); //Comparamos el nombre,se ignoran mayusculas y minusculas
