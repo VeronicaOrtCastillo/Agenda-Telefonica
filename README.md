@@ -45,7 +45,7 @@ Crea un sistema que permita gestionar una agenda telefonica.
 1. Abrir terminal
 2. Ejecutar:
 
-   git clone https://github.com/VeronicaOrtCastillo/Agenda-Telefonica
+   `git clone https://github.com/VeronicaOrtCastillo/Agenda-Telefonica`
 
 3. Entrar a la carpeta:
 
@@ -62,16 +62,16 @@ Crea un sistema que permita gestionar una agenda telefonica.
 ## Flujo de trabajo
 - Una vez realizados los cambios dentro de nuestra respectiva rama
 
-    `git add .`
-    `git git commit -m "Descripcion"`
-    `git push origin Nombre-rama`
+- `git add .`
+- `git git commit -m "Descripcion"`
+- `git push origin Nombre-rama`
 
 - Se acepta el pull request en github.
 
 - Se actualiza nuestro proyecto.
-  `git checkout main`
-  `git pull origin main`
+- `git checkout main`
+- `git pull origin main`
 
 - LLevar los cambios a nuestra rama
-  `git checkout nombre-rama`
-  `git merge main`
+- `git checkout nombre-rama`
+- `git merge main`
