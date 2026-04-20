@@ -24,9 +24,9 @@ Crea un sistema que permita gestionar una agenda telefonica.
 ## Tecnologías usadas
 - IntelliJ IDEA
 - Git & GitHub
-  git pull origin main
 ---
-## Clonar el repositorio
+# Flujo de trabajo
+## 1. Clonar el repositorio
 ### Opción 1: Desde IntelliJ
 
 1. Abrir IntelliJ IDEA
@@ -51,19 +51,22 @@ Crea un sistema que permita gestionar una agenda telefonica.
 
    cd Agenda-Telefonica
 
-4. Ejecuta:
+4. Ejecuta para descargar los nuevos cambios que existan en main
 
    `git pull origin main`
 
-5. Abrir IntelliJ y elegir la carpeta del proyecto
 ---
-## Creacion de ramas
-- Cada integrante crea su rama
+## 2. Creacion de ramas
+- Se utiliza la siguiente estructura
 
   `git checkout -b nombre-rama`
----
 
-## Flujo de trabajo
+---
+## 3. Actualizacion de rama develop a nuestra rama
+
+ `git pull origin develop`
+
+## 4. Cambios
 - Una vez realizados los cambios dentro de nuestra respectiva rama
 
     `git add .`
@@ -72,16 +75,16 @@ Crea un sistema que permita gestionar una agenda telefonica.
 
     `git push origin Nombre-rama`
 
-- Se acepta el pull request en github.
+- Se acepta el pull request en github dentro de rama develop no en rama main
 
-- Se actualiza nuestro proyecto.
+### Se actualiza nuestra rama al contenido de rama develop
+
+  `git pull origin develop`
+
+### Para traer las actualizaciones desde main
 
   `git checkout main`
-
   `git pull origin main`
+  `git checkout Nombre-feature`
+  `git merge main`
 
-- LLevar los cambios a nuestra rama
-
-    `git checkout nombre-rama`
-
-    `git merge main`
