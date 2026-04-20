@@ -38,15 +38,14 @@ public class Agenda {
 
     //Oswaldo
 
+    public void eliminarContacto (Contacto c){
+
+    }
+
+    public Boolean agendaLlena(){
 
 
-
-
-
-
-
-
-
+    }
     //Aaron
 
 
