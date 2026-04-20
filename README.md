@@ -27,6 +27,10 @@ Crea un sistema que permita gestionar una agenda telefonica.
   git pull origin main
 ---
 ## Clonar el repositorio
+- Cada integrante crea su rama
+
+    `git checkout -b nombre-rama`
+
 ### Opción 1: Desde IntelliJ
 
 1. Abrir IntelliJ IDEA
