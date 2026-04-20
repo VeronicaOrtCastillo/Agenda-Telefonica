@@ -2,7 +2,7 @@ package Agenda;
 
 public class Contacto {
 
-    //Ana
+    //Ana 
     // 1. Atributos
 
     private String nombre;
