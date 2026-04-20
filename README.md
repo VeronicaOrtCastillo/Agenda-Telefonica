@@ -1,12 +1,10 @@
 # Segundo Hackaton - Agenda Telefónica
 
-Proyecto desarrollado para el Hackathon.  
-Permite gestionar contactos mediante consola.
-
+Proyecto para el Hackathon #2.  
+Crea un sistema que permita gestionar una agenda telefonica.
 ---
 
-## 🚀 Funcionalidades
-
+## Funcionalidades
 - Añadir contacto
 - Evitar contactos duplicados (por nombre)
 - Buscar contacto por nombre
@@ -14,7 +12,6 @@ Permite gestionar contactos mediante consola.
 - Listar todos los contactos
 - Verificar si la agenda está llena
 - Mostrar espacios disponibles
-
 ---
 
 ## Estructura del proyecto
@@ -22,19 +19,12 @@ Permite gestionar contactos mediante consola.
 /src
 ├── Contacto.java
 └── Main.java
-
 ---
 
-## 🛠️ Tecnologías usadas
-
-- Java
+## Tecnologías usadas
 - IntelliJ IDEA
 - Git & GitHub
-
----
-
-## Cómo ejecutar
-
+  git pull origin main
 ### Opción 1: Desde IntelliJ
 
 1. Abrir IntelliJ IDEA
@@ -58,8 +48,9 @@ Permite gestionar contactos mediante consola.
 3. Entrar a la carpeta:
 
    cd Agenda-Telefonica
+4. Ejecuta:
 
-4. Abrir IntelliJ
-5. Seleccionar **Open** y elegir la carpeta del proyecto
+   git pull origin main
 
----
+5. Abrir IntelliJ
+6. Seleccionar **Open** y elegir la carpeta del proyecto
