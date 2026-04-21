@@ -5,7 +5,11 @@ import java.util.Comparator;
 
 public class Agenda {
     //Aaron
+    private List <Contacto> listaContacto;
 
+    public Agenda() {
+        this.listaContacto = new arrayList <> ();
+    }
 
 
 
@@ -118,6 +122,25 @@ public class Agenda {
         return contactos.size() >= capacidad;
     }
     //Aaron
+    // Metodo espaciosLibres
+
+    // Contamos los espacios libres
+    public int espaciosLibres() {
+        int contador = 0;
+        for (int i = 0; i < contacto.length; i++) {
+            if (contacto[i] == null) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+    // Mostramos los espacios libres
+    public void mostrarEspaciosLibres() {
+        int libres = espaciosLibres();
+        System.out.println("Espacios libres: " + libres + " de " + contacto.length);
+        System.out.println("Ocupados: " + (contacto.length - libres));
+    }
+
 
 
 
