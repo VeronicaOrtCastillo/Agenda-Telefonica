@@ -1,4 +1,6 @@
-package Agenda;
+package agenda;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,7 +34,7 @@ public class Main {
                     String telefono = scanner.nextLine();
 
                     Contacto nuevoContacto = new Contacto(nombre, apellido, telefono);
-                    agenda.anadirContacto(nuevoContacto);
+                    agenda.añadirContacto(nuevoContacto);
                     break;
 
                 case 2:
@@ -56,7 +58,7 @@ public class Main {
                 case 4:
                     System.out.print("Nombre del contacto a buscar: ");
                     String nombreBuscar = scanner.nextLine();
-                    agenda.buscaContacto(nombreBuscar);
+                    agenda.buscarContacto(nombreBuscar);
                     break;
 
                 case 5:

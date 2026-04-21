@@ -1,28 +1,18 @@
-package Agenda;
+package agenda;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class Agenda {
     //Aaron
-    private List <Contacto> listaContacto;
+    private List<Contacto> contactos;
     private int capacidad = 10; // Aquí guardamos el límite máximo
 
     public Agenda() {
-        this.listaContacto = new arrayList <> ();
+        this.contactos = new ArrayList<>();
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
      //Jesus
     //Añadir contacto y contacto existente 
@@ -56,10 +46,6 @@ public class Agenda {
             System.out.println("La agenda está llena");
         }
     }
-
-    }
-
-
 
     //Vero
     // METODO listarContactos: Mostrar todos los contactos de la agenda

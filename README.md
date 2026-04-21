@@ -1,4 +1,4 @@
-# Segundo Hackaton - Agenda Telefónica
+# Segundo Hackaton - agenda Telefónica
 
 Proyecto para el Hackathon #2.  
 Crea un sistema que permita gestionar una agenda telefonica.
@@ -49,7 +49,7 @@ Crea un sistema que permita gestionar una agenda telefonica.
 
 3. Entrar a la carpeta:
 
-   cd Agenda-Telefonica
+   cd agenda-Telefonica
 
 4. Ejecuta para descargar los nuevos cambios que existan en main
 
