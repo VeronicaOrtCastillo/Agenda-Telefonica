@@ -1,4 +1,4 @@
-# Segundo Hackaton - agenda Telefónica
+# Segundo Hackaton - Agenda Telefónica
 
 Proyecto para el Hackathon #2.  
 Crea un sistema que permita gestionar una agenda telefonica.
