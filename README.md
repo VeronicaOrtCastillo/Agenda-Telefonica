@@ -17,6 +17,35 @@ Crea un sistema que permita gestionar una agenda telefonica.
 - IntelliJ IDEA
 - Git & GitHub
 ---
+# Convencion de ramas
+
+Cada integrante trabaja en su propia rama:
+
+```
+Nombre-feature
+```
+
+| Integrante | Ramas                         |
+|------------|-------------------------------|
+| develop    |                             |
+| Ana        | `ana-feature`                 |
+| Oswaldo    | `Oswa-feature` |
+| Erick      | `erick-feature`              |
+| Aaron      | `Aaron_feature`               |
+| Jesus       | `Chucho-feature`              |
+| Vero        | `Vero-feature`               |
+---
+# Estructura del proyecto
+Agenda-Telefonica
+├── src/
+│   └── agenda                     <- Se crea un package para almacenar las clases
+|       ├── Agenda                 <- Clase Agenda almacena los metodos
+|       ├── Contacto               <- Clase Contacto se crean atributos,contructores,getter,setters y to string
+|       └── Main                   <- Clase Main en esta se encuentra el menú que visualiza el usuario
+|
+└── README.md                      <- Este archivo  
+---
+
 # Flujo de trabajo
 ## 1. Clonar el repositorio
 ### Opción 1: Desde IntelliJ
@@ -83,24 +112,5 @@ Crea un sistema que permita gestionar una agenda telefonica.
   
   `git merge main`
 
-# Convencion de ramas
 
-Cada integrante trabaja en su propia rama:
-
-```
-Nombre-feature
-```
-
-| Integrante | Ramas                         |
-|------------|-------------------------------|
-| develop    |                             |
-| Ana        | `ana-feature`                 |
-| Oswaldo    | `Oswa-feature` |
-| Erick      | `erick-feature`              |
-| Aaron      | `Aaron_feature`               |
-| Jesus       | `Chucho-feature`              |
-| Vero        | `Vero-feature`               |
-
-
----
 
