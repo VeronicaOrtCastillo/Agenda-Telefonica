@@ -6,6 +6,7 @@ import java.util.Comparator;
 public class Agenda {
     //Aaron
     private List <Contacto> listaContacto;
+    private int capacidad = 10; // Aquí guardamos el límite máximo
 
     public Agenda() {
         this.listaContacto = new arrayList <> ();
@@ -31,9 +32,10 @@ public class Agenda {
         boolean existe = false;
 
         // Revisar si el contacto ya existe
-        for (int i = 0; i < cantidad; i++) {
-            if (agenda[i].getNombre().equals(c.getNombre()) &&
-                    agenda[i].getApellidos().equals(c.getApellidos())) {
+        for (Contacto existente : contactos) {
+            if(existente.getNombre().equalsIgnoreCase(c.getNombre()) &&
+                    existente.getApellidos().equalsIgnoreCase(c.getApellidos()))
+            {
 
                 existe = true;
                 break;
@@ -45,9 +47,8 @@ public class Agenda {
             System.out.println("El contacto ya existe");
         }
         // Si no existe, revisar espacio
-        else if (cantidad < 10) {
-            agenda[cantidad] = c;
-            cantidad++;
+        else if (contactos.size() < capacidad) {
+            contactos.add(c);
             System.out.println("Contacto agregado correctamente");
         }
         // Si no hay espacio
@@ -57,14 +58,6 @@ public class Agenda {
     }
 
     }
-    private int capacidad = 10; // Aquí guardamos el límite máximo
-    //Jesus
-
-
-
-
-
-
 
 
 
