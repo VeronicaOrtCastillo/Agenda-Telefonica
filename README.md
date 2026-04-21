@@ -36,6 +36,7 @@ Nombre-feature
 | Vero        | `Vero-feature`               |
 ---
 # Estructura del proyecto
+```
 Agenda-Telefonica
 ├── src/
 │   └── agenda                     <- Se crea un package para almacenar las clases
@@ -43,7 +44,8 @@ Agenda-Telefonica
 |       ├── Contacto               <- Clase Contacto se crean atributos,contructores,getter,setters y to string
 |       └── Main                   <- Clase Main en esta se encuentra el menú que visualiza el usuario
 |
-└── README.md                      <- Este archivo  
+└── README.md                      <- Este archivo
+```
 ---
 
 # Flujo de trabajo
