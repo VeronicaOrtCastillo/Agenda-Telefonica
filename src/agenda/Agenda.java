@@ -1,94 +1,102 @@
 package agenda;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class Agenda {
     //Aaron
-    private List<Contacto> contactos;
-    private int capacidad = 10; // Aquí guardamos el límite máximo
+    private final List<Contacto> contactos;
+    private final int capacidad = 10; // Aquí guardamos el límite máximo
 
     public Agenda() {
         this.contactos = new ArrayList<>();
     }
 
-     //Jesus
-    //Añadir contacto y contacto existente 
-
-    public void añadirContacto(Contacto c){
+    //Jesus
+    //Añadir contacto
+    public void anadirContacto(Contacto c){
         System.out.println("AÑADE UN CONTACTO");
+
+        // Verificamos internamente si existe
         boolean existe = false;
-
-        // Revisar si el contacto ya existe
         for (Contacto existente : contactos) {
-            if(existente.getNombre().equalsIgnoreCase(c.getNombre()) &&
-                    existente.getApellidos().equalsIgnoreCase(c.getApellidos()))
-            {
-
+            if(existente.equals(c)) {
                 existe = true;
                 break;
             }
         }
 
-        // Si ya existe, no se agrega
         if (existe) {
             System.out.println("El contacto ya existe");
-        }
-        // Si no existe, revisar espacio
-        else if (contactos.size() < capacidad) {
+        } else if (contactos.size() < capacidad) {
             contactos.add(c);
             System.out.println("Contacto agregado correctamente");
-        }
-        // Si no hay espacio
-        else {
+        } else {
             System.out.println("La agenda está llena");
+        }
+    }
+
+    // Verificar si existe el contacto retorna void
+    public void existeContacto(Contacto c) {
+        boolean existe = false;
+        for (Contacto existente : contactos) {
+            if(existente.equals(c)) {
+                existe = true;
+                break;
+            }
+        }
+
+        if (existe) {
+            System.out.println("El contacto sí existe.");
+        } else {
+            System.out.println("El contacto no existe.");
         }
     }
 
     //Vero
     // METODO listarContactos: Mostrar todos los contactos de la agenda
     public void listarContactos(){
-        System.out.println("\n CONTACTOS");
+        System.out.println("\n--- CONTACTOS ---");
         if (contactos.isEmpty()) { //Verificamos si la lista esta vacía
             System.out.println("Agenda Vacía");
             return;
         }
         //Se ordena la lista antes de mostrarla
-        Collections.sort(contactos, new Comparator<Contacto>(){
+        contactos.sort(new Comparator<Contacto>() {
             @Override
             public int compare(Contacto c1, Contacto c2) {
-                int resultadoNombre = c1.getNombre().compareToIgnoreCase(c2.getNombre()); // Comparamos nombres ignorando mayúsculas
+                int resultadoNombre = c1.getNombre().compareToIgnoreCase(c2.getNombre());
 
-                if (resultadoNombre == 0) { // Si los nombres son iguales, comparamos apellidos
+                if (resultadoNombre == 0) {
                     return c1.getApellidos().compareToIgnoreCase(c2.getApellidos());
                 }
-                return resultadoNombre; // Si no son iguales, usamos el resultado del nombre
+                return resultadoNombre;
             }
         });
-        for (Contacto c : contactos) { //Recorremos la lista de contactos ya ordenada
-            System.out.println(c.getNombre() + " " + c.getApellidos() + " " + c.getTelefono()
-            );
+        for (Contacto c : contactos) {
+            System.out.println("Nombre: " + c.getNombre() + " " + c.getApellidos() + " | Telefono: " + c.getTelefono());
         }
     }
-    //METODO buscarContacto: Busca un contacto por su nombre y muestra su telefono
-    public void buscarContacto(String nombre, String apellidos) {
-        for (Contacto c : contactos) { //Recorremos todos los contactos
-            boolean mismoNombre = c.getNombre().equalsIgnoreCase(nombre); //Comparamos el nombre,se ignoran mayusculas y minusculas
-            boolean mismosApellidos = c.getApellidos().equalsIgnoreCase(apellidos); //Comparamos el apellido,se ignoran mayusculas y minusculas
-            if (mismoNombre && mismosApellidos){ //Si son iguales tanto nombre como apellido
-                System.out.println(nombre + " " + apellidos + " Telefono: " + c.getTelefono());
-                return;
+
+    //METODO buscaContacto: Busca un contacto por su nombre y muestra su telefono (retorna void)
+    public void buscaContacto(String nombre) {
+        boolean encontrado = false;
+        for (Contacto c : contactos) {
+            if (c.getNombre().equalsIgnoreCase(nombre)){
+                System.out.println("Encontrado -> " + c.getNombre() + " " + c.getApellidos() + " - Telefono: " + c.getTelefono());
+                encontrado = true;
             }
         }
-        System.out.println("Contacto no encontrado");
+        if (!encontrado){
+            System.out.println("Contacto no encontrado");
+        }
     }
 
     //Oswaldo
-
     // Se verifica si se puede eliminar el contacto
     public void eliminarContacto(Contacto c) {
+        // ArrayList.remove() usará el metodo equals() de Contacto
         if (contactos.remove(c)) {
             System.out.println("Contacto eliminado correctamente.");
         } else {
@@ -96,27 +104,15 @@ public class Agenda {
         }
     }
 
-    // La agenda está llena si el número de elementos llegó al límite
-    public Boolean agendaLlena() {
+    // La agenda está llena si el número de elementos llegó al límite devolviendo boolean
+    public boolean agendaLlena() {
         return contactos.size() >= capacidad;
     }
+
     //Aaron
-    // Metodo espaciosLibres
-
-public void mostrarEspaciosLibres() {
-
-    int libres = capacidad - contactos.size();
-    System.out.println("Espacios libres: " + libres + " de " + capacidad);
+    // Metodo espaciosLibres retornando int
+    public int espacioLibres() {
+        return capacidad - contactos.size();
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-}
