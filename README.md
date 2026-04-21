@@ -13,14 +13,6 @@ Crea un sistema que permita gestionar una agenda telefonica.
 - Verificar si la agenda está llena
 - Mostrar espacios disponibles
 ---
-
-## Estructura del proyecto
-
-/src
-├── Contacto.java
-└── Main.java
----
-
 ## Tecnologías usadas
 - IntelliJ IDEA
 - Git & GitHub
@@ -84,7 +76,31 @@ Crea un sistema que permita gestionar una agenda telefonica.
 ### Para traer las actualizaciones desde main
 
   `git checkout main`
+  
   `git pull origin main`
+  
   `git checkout Nombre-feature`
+  
   `git merge main`
+
+# Convencion de ramas
+
+Cada integrante trabaja en su propia rama:
+
+```
+Nombre-feature
+```
+
+| Integrante | Ramas                         |
+|------------|-------------------------------|
+| develop    |                             |
+| Ana        | `ana-feature`                 |
+| Oswaldo    | `Oswa-feature` |
+| Erick      | `erick-feature`              |
+| Aaron      | `Aaron_feature`               |
+| Jesus       | `Chucho-feature`              |
+| Vero        | `Vero-feature`               |
+
+
+---
 
