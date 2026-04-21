@@ -56,4 +56,13 @@ public class Contacto {
                 ", telefono='" + telefono + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Contacto otro = (Contacto) obj;
+        return this.nombre.equalsIgnoreCase(otro.nombre) &&
+                this.apellidos.equalsIgnoreCase(otro.apellidos);
+    }
 }
